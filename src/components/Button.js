@@ -11,7 +11,7 @@ export const ButtonInline = ({
         className="button-inline"
         onClick={onClick}
     >
-        {children}”
+        {children}
     </Button>
 
 export const Button = ({
