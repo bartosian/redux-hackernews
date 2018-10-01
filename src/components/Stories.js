@@ -30,6 +30,16 @@ archive: {
 
     const Stories = ({ stories }) =>
     <div className="stories">
+        <div className="stories-header">
+        {Object.keys(COLUMNS).map(key =>
+                <span
+                    key={key}
+                    style={{ width: COLUMNS[key].width }}
+                >
+          {COLUMNS[key].label}
+        </span>
+        )}
+    </div>
         {(stories || []).map(story =>
             <Story
                 key={story.objectID}
