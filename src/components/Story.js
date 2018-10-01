@@ -34,17 +34,31 @@ const Story = ({ story, columns, onArchive }) => {
     );
 }
 
-const ButtonInline = ({
+“const ButtonInline = ({
                            onClick,
                            type = 'button',
                            children
                        }) =>
-    <button
+    <Button
         type={type}
         className="button-inline"
-onClick={onClick}
->
-{children}
-</button>
+        onClick={onClick}
+    >
+        {children}”
+        </Button>
+
+const Button = ({
+                    onClick,
+                    className,
+                    type = 'button',
+                    children
+                }) =>
+    <button
+        type={type}
+        className={className}
+        onClick={onClick}
+    >
+        {children}
+    </button>
 
     export default Story;
