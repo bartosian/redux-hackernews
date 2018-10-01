@@ -22,5 +22,5 @@ const stories = [
     },
 ];
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App stories={ stories }/>, document.getElementById('root'));
 registerServiceWorker();
