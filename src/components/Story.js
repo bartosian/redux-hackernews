@@ -1,5 +1,6 @@
 import React from 'react';
 import './Story.css';
+import { ButtonInline } from "./Button";
 
 const Story = ({ story, columns, onArchive }) => {
     const {
@@ -34,31 +35,5 @@ const Story = ({ story, columns, onArchive }) => {
     );
 }
 
-“const ButtonInline = ({
-                           onClick,
-                           type = 'button',
-                           children
-                       }) =>
-    <Button
-        type={type}
-        className="button-inline"
-        onClick={onClick}
-    >
-        {children}”
-        </Button>
-
-const Button = ({
-                    onClick,
-                    className,
-                    type = 'button',
-                    children
-                }) =>
-    <button
-        type={type}
-        className={className}
-        onClick={onClick}
-    >
-        {children}
-    </button>
 
     export default Story;
