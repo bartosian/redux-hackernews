@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
+import store from './store/index';
 import registerServiceWorker from './registerServiceWorker';
 
 const stories = [
@@ -22,5 +23,5 @@ const stories = [
     },
 ];
 
-ReactDOM.render(<App stories={ stories } onArchieve={ () => {} }/>, document.getElementById('root'));
+ReactDOM.render(<App stories={ store.getState() } onArchieve={ () => {} }/>, document.getElementById('root'));
 registerServiceWorker();
