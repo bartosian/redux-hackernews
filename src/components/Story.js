@@ -26,16 +26,25 @@ const Story = ({ story, columns, onArchive }) => {
         {points}
       </span>
             <span style={{ width: columns.archive.width }}>
-                <button
-                type="button"
-                className="button-inline"
-                onClick={() => onArchive(objectID)}
-            >
+                <ButtonInline onClick={() => onArchive(objectID)}>
           Archive
-        </button>
+        </ButtonInline>
       </span>
         </div>
     );
 }
 
-export default Story;
+const ButtonInline = ({
+                           onClick,
+                           type = 'button',
+                           children
+                       }) =>
+    <button
+        type={type}
+        className="button-inline"
+onClick={onClick}
+>
+{children}
+</button>
+
+    export default Story;
